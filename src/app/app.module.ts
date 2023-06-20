@@ -8,7 +8,10 @@ import { ChampionCardComponent } from './components/champion-card/champion-card.
 import { ChampionDetailComponent } from './components/champion-detail/champion-detail.component';
 import { AllChampionsComponent } from './components/all-champions/all-champions.component';
 import { NgOptimizedImage } from '@angular/common';
-;
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+
 
 @NgModule({
   declarations: [
@@ -22,6 +25,9 @@ import { NgOptimizedImage } from '@angular/common';
     AppRoutingModule,
     HttpClientModule,
     NgOptimizedImage,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

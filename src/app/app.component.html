@@ -1,8 +1,17 @@
 <!-- Toolbar -->
-<ul>
-  <li><a routerLink="/">Inicio</a></li>
-  <li><a routerLink="/campeones">Campeones</a></li>
-</ul>
+<div class="toolbar-container">
+  <ul class="menu-bar">
+    <li (click)="homeNavigate()">
+      <mat-icon aria-hidden="false" aria-label="Home icon" fontIcon="home" class="toolbar-icon"></mat-icon>
+      Inicio
+    </li>
+    <li (click)="champsNavigate()">
+      <mat-icon aria-hidden="false" aria-label="Home icon" fontIcon="stars" class="toolbar-icon"></mat-icon>
+      Campeones
+    </li>
+  </ul>
+</div>
+
 
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
