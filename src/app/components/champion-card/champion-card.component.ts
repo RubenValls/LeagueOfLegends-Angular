@@ -12,6 +12,7 @@ export class ChampionCardComponent {
     id: '',
     name: '',
     title: '',
+    blurb: '',
     info: {},
     tags: [],
   }
