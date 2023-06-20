@@ -5,6 +5,8 @@
     justify-content: center;
   }
   .menu-bar {
+    z-index: 10000 !important;
+    position: fixed;
     border-radius: 25px;
     height: -webkit-fit-content;
     height: -moz-fit-content;
