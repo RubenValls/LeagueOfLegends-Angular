@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { ChampionCardComponent } from './components/champion-card/champion-card.component';
 import { ChampionDetailComponent } from './components/champion-detail/champion-detail.component';
 import { AllChampionsComponent } from './components/all-champions/all-champions.component';
+import { NgOptimizedImage } from '@angular/common';
 ;
 
 @NgModule({
@@ -19,7 +20,8 @@ import { AllChampionsComponent } from './components/all-champions/all-champions.
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgOptimizedImage,
   ],
   providers: [],
   bootstrap: [AppComponent]

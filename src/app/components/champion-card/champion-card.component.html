@@ -1,6 +1,6 @@
 <div class="nft" (click)="navigate()">
   <div class='main'>
-    <img class='tokenImage'src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/{{champion.id}}_0.jpg" alt="{{champion.name}}" />
+    <img ngClass='tokenImage' ngSrc="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/{{champion.id}}_0.jpg" alt="{{champion.name}}" width="300" height="300"/>
     <h2>{{champion.name}}</h2>
     <h3>{{champion.title}}</h3>
     <p class='description'>{{champion.blurb}}</p>
