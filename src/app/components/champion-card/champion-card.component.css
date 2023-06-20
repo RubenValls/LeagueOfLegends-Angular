@@ -27,6 +27,9 @@
   width: 90%;
   padding: 1rem;
 }
+.nft .main h2, .nft .main h3 {
+  margin: 5px;
+}
 .nft .main .tokenImage {
   border-radius: 0.5rem;
   max-width: 100%;
@@ -78,8 +81,7 @@
   align-items: center;
   border: 1px solid #ffffff22;
   padding: 0.3rem;
-  margin: 0;
-  margin-right: 0.5rem;
+  margin: auto;
   border-radius: 20%;
 }
 .nft .main .creator .wrapper img {

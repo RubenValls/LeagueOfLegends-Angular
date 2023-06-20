@@ -5,7 +5,7 @@ import { AllChampionsComponent } from './components/all-champions/all-champions.
 
 const routes: Routes = [
   {path: 'campeones', component: AllChampionsComponent},
-  {path: 'detalle', component: ChampionDetailComponent}
+  {path: 'detalle',component: ChampionDetailComponent}
 ];
 
 @NgModule({
