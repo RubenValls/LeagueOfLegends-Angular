@@ -11,7 +11,7 @@ import { NgOptimizedImage } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
-import { HomeComponentComponent } from './home-component/home-component.component';
+import { HomeComponentComponent } from './components/home-component/home-component.component';
 
 
 @NgModule({
