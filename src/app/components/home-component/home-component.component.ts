@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { defaultChampions } from 'src/constants/defaultChampions';
 
 @Component({
@@ -7,6 +8,7 @@ import { defaultChampions } from 'src/constants/defaultChampions';
   styleUrls: ['./home-component.component.css']
 })
 export class HomeComponentComponent {
+  constructor(private router: Router) {}
   championSelected = 0
   type = 'assassin'
   defaultChampions = defaultChampions
@@ -16,5 +18,8 @@ export class HomeComponentComponent {
   changeChampion(number: number, type: string){
     this.championSelected = number;
     this.type = type
+  }
+  champsNavigate(){
+    this.router.navigate(['/campeones']);
   }
 }
