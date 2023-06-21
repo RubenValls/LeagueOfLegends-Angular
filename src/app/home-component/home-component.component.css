@@ -38,12 +38,20 @@ body {
   content: '';
   position: absolute;
   width: 100%;
-  background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
+  background-image: linear-gradient(180deg, #E5D487, #947538);
   height: 130%;
-  animation: rotBGimg 5s linear infinite;
-  transition: all 0.2s linear;
+  animation: rotBGimg 10s linear infinite;
+  transition: all 1s linear;
 }
+@keyframes rotBGimg {
+  from {
+    transform: rotate(0deg);
+  }
 
+  to {
+    transform: rotate(360deg);
+  }
+}
 .card::after {
   content: '';
   position: absolute;
@@ -86,4 +94,140 @@ button:hover {
 
 button:focus {
   outline: none;
+}
+
+.champions-section{
+  width: 100%;
+}
+
+.champions-section-title{
+  margin-top: 30px;
+  margin-bottom: 15px;
+  text-align: center;
+  width: 100%;
+}
+
+.champions-section-title img{
+  max-width: 100%;
+  padding: 10px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin : auto;
+  width  : auto;
+}
+
+menu {
+  border-radius : 3px;
+  padding: 0;
+}
+
+menu:after , menu:before {
+  display : block;
+  content : ' ';
+}
+
+menu:after {
+  clear : both;
+}
+
+li {
+  list-style-type : none;
+  background      : linear-gradient(180deg, #E5D487, #947538);
+
+  float   : left;
+  cursor  : pointer;
+  padding : 2px 8px;
+  border-top    : 2px solid #E5D487;
+  border-bottom : 2px solid #947538;
+}
+
+li:first-child {
+  border-radius : 5px 0 0 5px;
+}
+
+li:last-child {
+  border-radius : 0 5px 5px 0;
+}
+
+@media (max-width: 500px) {
+  a {
+    display : block;
+    padding : 1px 2px;
+    font-size : 25px;
+    text-decoration : none;
+    border-radius   : 5px;
+    position        : relative;
+    top   : 0;
+    color : black;
+    transition : all .4s;
+  }
+  a svg{
+    width: 22px;
+    height: auto;
+  }
+}
+
+@media (min-width: 501px) {
+  a {
+    display : block;
+    padding : 5px 5px;
+    font-size : 35px;
+    text-decoration : none;
+    border-radius   : 5px;
+    position        : relative;
+    top   : 0;
+    color : black;
+    transition : all .4s;
+  }
+  a svg{
+    width: 30px;
+    height: auto;
+
+  }
+}
+
+li:hover a {
+  top   : -20px;
+  color : #E5D487;
+  background-color: black;
+  box-shadow : 0 0 5px 0 black;
+  transition : all .4s;
+}
+
+li a:after {
+  display  : block;
+  content  : '';
+  position : absolute;
+  top  : 100%;
+  left : 42%;
+  border-style : solid;
+  border-color : transparent;
+  border-width : 5px 5px 0 5px;
+  transition   : all .4s;
+}
+
+li:hover a:after {
+  border-color : white transparent transparent transparent;
+  transition   : all .4s;
+}
+
+.selected {
+  top   : -20px;
+  color : #E5D487;
+  background-color: black;
+  box-shadow : 0 0 5px 0 black;
+  transition : all .4s;
+}
+
+.selected:after {
+  border-color : white transparent transparent transparent;
+  transition   : all .4s;
+}
+
+a.fun {
+  display : none;
 }
