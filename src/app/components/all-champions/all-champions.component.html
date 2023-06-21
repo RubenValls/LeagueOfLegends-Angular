@@ -1,4 +1,12 @@
-<div class="champions">
-    <app-champion-card [champion]="champion[1]" *ngFor="let champion of champions"/>
+<div class="searcher-container">
+  <input #newChamp type="text" class="form__field" placeholder="Ashe, Brand, Elise..." id="input" newChamp.value=''/>
+  <button type="button" class="btn btn--primary btn--inside uppercase" (click)="addFind(newChamp.value)">
+    Buscar
+  </button>
 </div>
-
+<div class="champions">
+  <app-champion-card
+    [champion]="champion[1]"
+    *ngFor="let champion of champions"
+  />
+</div>
