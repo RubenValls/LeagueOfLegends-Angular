@@ -156,26 +156,8 @@ li:last-child {
 @media (max-width: 500px) {
   a {
     display : block;
-    padding : 1px 2px;
-    font-size : 25px;
-    text-decoration : none;
-    border-radius   : 5px;
-    position        : relative;
-    top   : 0;
-    color : black;
-    transition : all .4s;
-  }
-  a svg{
-    width: 22px;
-    height: auto;
-  }
-}
-
-@media (min-width: 501px) {
-  a {
-    display : block;
-    padding : 5px 5px;
-    font-size : 35px;
+    padding : 2px 4px;
+    font-size : 30px;
     text-decoration : none;
     border-radius   : 5px;
     position        : relative;
@@ -185,6 +167,24 @@ li:last-child {
   }
   a svg{
     width: 30px;
+    height: auto;
+  }
+}
+
+@media (min-width: 501px) {
+  a {
+    display : block;
+    padding : 5px 5px;
+    font-size : 40px;
+    text-decoration : none;
+    border-radius   : 5px;
+    position        : relative;
+    top   : 0;
+    color : black;
+    transition : all .4s;
+  }
+  a svg{
+    width: 35px;
     height: auto;
 
   }
