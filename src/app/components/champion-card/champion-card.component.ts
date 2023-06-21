@@ -29,4 +29,12 @@ export class ChampionCardComponent {
     this.router.navigate(['detalle', {data: championJSON}]);
   }
 
+  getSvg(tag:string){
+    let htmlObject : any = document.querySelector('.wrapper')
+    switch(tag){
+      default:
+        return tag
+    }
+  }
+
 }
