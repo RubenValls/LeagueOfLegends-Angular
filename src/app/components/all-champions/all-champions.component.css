@@ -14,7 +14,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 125px;
+  margin-top: 80px;
+  padding: 20px;
 }
 .uppercase {
   text-transform: uppercase;
