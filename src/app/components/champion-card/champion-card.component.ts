@@ -25,8 +25,7 @@ export class ChampionCardComponent {
   }
 
   navigate() {
-    const championJSON = JSON.stringify(this.champion)
-    this.router.navigate(['detalle', {data: championJSON}]);
+    this.router.navigate([`${this.champion.id}`]);
   }
 
 }
