@@ -6,9 +6,7 @@
     <p class='description'>{{champion.blurb}}</p>
     <hr />
     <div class='creator'>
-      <div class='wrapper' *ngFor="let tag of champion.tags">
-        {{getSvg(tag)}}
-      </div>
+      <div class='wrapper' *ngFor="let tag of champion.tags" class="{{tag.toLocaleLowerCase()}}"></div>
     </div>
   </div>
 </div>
