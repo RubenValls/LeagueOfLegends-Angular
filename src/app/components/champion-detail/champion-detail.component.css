@@ -7,7 +7,7 @@
 }
 @media (max-width: 800px) {
   .detail-container{
-    margin-top: 100px;
+    margin-top: 80px;
   }
   .detailImage{
     width: 100%;
@@ -31,7 +31,7 @@
     font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;;
     text-transform: uppercase;
     display: block;
-    font-size: 50px;
+    font-size: 60px;
     color: #f1ebe5;
     text-shadow: 0 8px 9px #2c2b2b, 0px -2px 1px #adadad;
     font-weight: bold;
@@ -51,7 +51,7 @@
     font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;;
     text-transform: uppercase;
     display: block;
-    font-size: 150px;
+    font-size: 110px;
     color: #f1ebe5;
     text-shadow: 0 8px 9px #2c2b2b, 0px -2px 1px #adadad;
     font-weight: bold;
@@ -114,4 +114,8 @@ span{
   border-color:#f1c40f transparent transparent transparent;
 }
 p{padding-top:5px;font-size:17px}
+.detail-footer{
+  width: 100%;
+  height: auto;
+}
 
