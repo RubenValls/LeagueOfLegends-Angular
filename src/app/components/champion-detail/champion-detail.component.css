@@ -20,13 +20,7 @@
     height: auto;
   }
 }
-.centered{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .milky {
     font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;;
     text-transform: uppercase;
@@ -46,7 +40,7 @@
     border-radius: 20px;
   }
 }
-@media (min-width: 801px) {
+@media (min-width: 901px) {
   .milky {
     font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;;
     text-transform: uppercase;
@@ -81,14 +75,14 @@ span{
   color:#f1c40f;
   padding:0 10px;
   font-size:20px;
-  position:relative; 
+  position:relative;
   top:-27px;
 }
 .corner{height:30px;
   width:30px;
   border-radius:50%;
   border:1px solid #fff;
-  transform:rotate(-45deg);  
+  transform:rotate(-45deg);
   position:absolute;
   background:#1D1F20;
 }
@@ -117,6 +111,11 @@ p{padding-top:5px;font-size:17px}
 .detail-footer{
   width: 100%;
   height: auto;
+  bottom: 0;
+}
+.text-container{
+  width: 100%;
+  text-align: center;
 }
 .info-container{
   padding: 20px
@@ -140,8 +139,6 @@ p{padding-top:5px;font-size:17px}
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  cursor: pointer;
-  font-family: 'Poppins', sans-serif;
 }
 
 .icon {
@@ -163,6 +160,19 @@ p{padding-top:5px;font-size:17px}
   fill: #202020;
   height: 100%;
   padding: 10px;
+}
+
+.title{
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  background: -webkit-linear-gradient(#E5D487, #947538);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 4px;
 }
 
 .card .title {
@@ -200,6 +210,7 @@ p{padding-top:5px;font-size:17px}
   max-height: 40px;
 }
 .habilities-container{
+  padding: 20px;
   background:#1D1F20;
   color: white;
 }
@@ -222,7 +233,7 @@ p{padding-top:5px;font-size:17px}
   background: linear-gradient(#E5D487, gold, #dab367);
   background-repeat: repeat;
   box-shadow: 0 0 10px 0px orange;
-  animation: 
+  animation:
     shine 8s ease-in infinite,
     end 1s ease-out 1 7s;
   transition: width 3s ease 3s;
@@ -242,4 +253,125 @@ p{padding-top:5px;font-size:17px}
 @keyframes end {
   0%, 100% { box-shadow: 0 0 10px 0px orange; }
   50% { box-shadow: 0 0 15px 5px orange; }
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin : auto;
+  width  : auto;
+}
+
+menu {
+  margin-top: 25px;
+  border-radius : 3px;
+  padding: 0;
+}
+
+menu:after , menu:before {
+  display : block;
+  content : ' ';
+}
+
+menu:after {
+  clear : both;
+}
+
+li {
+  list-style-type : none;
+  background      : linear-gradient(180deg, #E5D487, #947538);
+
+  float   : left;
+  cursor  : pointer;
+  padding : 2px 8px;
+  border-top    : 2px solid #E5D487;
+  border-bottom : 2px solid #947538;
+}
+
+li:first-child {
+  border-radius : 5px 0 0 5px;
+}
+
+li:last-child {
+  border-radius : 0 5px 5px 0;
+}
+
+@media (max-width: 500px) {
+  a {
+    display : block;
+    padding : 2px 4px;
+    font-size : 30px;
+    text-decoration : none;
+    border-radius   : 5px;
+    position        : relative;
+    top   : 0;
+    color : black;
+    transition : all .4s;
+  }
+  a img{
+    width: 30px;
+    height: auto;
+  }
+}
+
+@media (min-width: 501px) {
+  a {
+    display : block;
+    padding : 5px 5px;
+    font-size : 40px;
+    text-decoration : none;
+    border-radius   : 5px;
+    position        : relative;
+    top   : 0;
+    color : black;
+    transition : all .4s;
+  }
+  a img{
+    width: 35px;
+    height: auto;
+
+  }
+}
+
+li:hover a {
+  top   : -20px;
+  color : #E5D487;
+  background-color: black;
+  box-shadow : 0 0 5px 0 black;
+  transition : all .4s;
+}
+
+li a:after {
+  display  : block;
+  content  : '';
+  position : absolute;
+  top  : 100%;
+  left : 42%;
+  border-style : solid;
+  border-color : transparent;
+  border-width : 5px 5px 0 5px;
+  transition   : all .4s;
+}
+
+li:hover a:after {
+  border-color : white transparent transparent transparent;
+  transition   : all .4s;
+}
+
+.selected {
+  top   : -20px;
+  color : #E5D487;
+  background-color: black;
+  box-shadow : 0 0 5px 0 black;
+  transition : all .4s;
+}
+
+.selected:after {
+  border-color : white transparent transparent transparent;
+  transition   : all .4s;
+}
+
+a.fun {
+  display : none;
 }

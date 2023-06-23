@@ -14,6 +14,7 @@ export class ChampionDetailComponent {
   championDetails: any = {}
 
   ngOnInit() {
+      window.scrollTo({top: 0, behavior: 'smooth'});
       this.http.get(`https://ddragon.leagueoflegends.com/cdn/13.12.1/data/es_ES/champion${location.pathname}.json`)
       .subscribe((data: any) => {
         this.championDetails = Object.values(data.data)[0];

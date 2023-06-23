@@ -1,6 +1,6 @@
 <div class="detail-container">
   <div class="detail-img">
-    <img ngClass='detailImage' src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/{{championDetails.id}}_0.jpg" alt="{{championDetails.name}}"/>
+    <img ngClass='detailImage' src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/{{championDetails.id}}_0.jpg" alt="{{championDetails.name}}" priority/>
     <div class="centered">
       <div class="milky">
         {{championDetails.name}}
@@ -20,7 +20,9 @@
     </div>
   </div>
   <div class="info-container">
-    <h1>INFO</h1>
+    <div class="text-container">
+      <h1 class="title">INFORMACIÓN DEL CAMPEÓN</h1>
+    </div>
     <div class="info-grid">
       <div class="card">
         <div class="icon">
@@ -82,7 +84,20 @@
     </div>
   </div>
   <div class="habilities-container">
-    <h1>HABILITIES</h1>
+    <div class="text-container">
+      <h1 class="title">HABILIDADES</h1>
+      <div>
+        <nav>
+          <menu>
+            <li><a><img src="https://ddragon.leagueoflegends.com/cdn/13.12.1/img/passive/{{championDetails?.passive?.image?.full}}"/></a></li>
+            <li><a ><img src="https://ddragon.leagueoflegends.com/cdn/13.12.1/img/spell/{{championDetails?.spells[0]?.image?.full}}"/></a></li>
+            <li><a ><img src="https://ddragon.leagueoflegends.com/cdn/13.12.1/img/spell/{{championDetails?.spells[1]?.image?.full}}"/></a></li>
+            <li><a ><img src="https://ddragon.leagueoflegends.com/cdn/13.12.1/img/spell/{{championDetails?.spells[2]?.image?.full}}"/></a></li>
+            <li><a ><img src="https://ddragon.leagueoflegends.com/cdn/13.12.1/img/spell/{{championDetails?.spells[3]?.image?.full}}"/></a></li>
+          </menu>
+        </nav>
+      </div>
+    </div>
   </div>
   <div class="detail-footer">
     <video src="https://assets.contentstack.io/v3/assets/blt731acb42bb3d1659/bltfa2accf67922dd3a/5f495972a11538653ea58f65/ss2020_lux_sylas_1920x1080.mp4" [autoplay]="true" [muted]="true" [playsInline]="true" [loop]="true" width="100%"></video>
