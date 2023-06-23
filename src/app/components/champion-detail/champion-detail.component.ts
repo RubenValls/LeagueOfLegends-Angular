@@ -18,30 +18,27 @@ export class ChampionDetailComponent {
       .subscribe((data: any) => {
         this.championDetails = Object.values(data.data)[0];
         console.log(Object.values(data.data)[0])
+        this.setAttackProgress(this.championDetails.info.attack)
+        this.setMagicProgress(this.championDetails.info.magic)
+        this.setDefenseProgress(this.championDetails.info.defense)
+        this.setDifficultProgress(this.championDetails.info.difficulty)
       })
   }
   setAttackProgress(attack: number){
     const bar: any = document.querySelector(".attackbar");
-    setTimeout(() => {
-      bar.style.setProperty("--progress", `${attack*10}%`);
-    }, 500);
+    bar.style.setProperty("--progress", `${attack*10}%`);
+
   }
   setMagicProgress(magic: number){
     const bar: any = document.querySelector(".magicbar");
-    setTimeout(() => {
-      bar.style.setProperty("--progress", `${magic*10}%`);
-    }, 500);
+    bar.style.setProperty("--progress", `${magic*10}%`);
   }
   setDefenseProgress(defense: number){
     const bar: any = document.querySelector(".defensebar");
-    setTimeout(() => {
-      bar.style.setProperty("--progress", `${defense*10}%`);
-    }, 500);
+    bar.style.setProperty("--progress", `${defense*10}%`);
   }
   setDifficultProgress(difficult: number){
     const bar: any = document.querySelector(".difficultbar");
-    setTimeout(() => {
-      bar.style.setProperty("--progress", `${difficult*10}%`);
-    }, 500);
+    bar.style.setProperty("--progress", `${difficult*10}%`);
   }
 }
