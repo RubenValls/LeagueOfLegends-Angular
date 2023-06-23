@@ -30,7 +30,7 @@ export class ChampionDetailComponent {
         this.habilityDescription = this.championDetails.passive.description
         this.video = this.championDetails.key.length === 2
           ? `https://d28xe8vt774jo5.cloudfront.net/champion-abilities/00${this.championDetails.key}/ability_00${this.championDetails.key}_P1.webm`
-          : this.video = this.championDetails.key.length === 0
+          : this.video = this.championDetails.key.length === 1
             ? `https://d28xe8vt774jo5.cloudfront.net/champion-abilities/000${this.championDetails.key}/ability_000${this.championDetails.key}_P1.webm`
             : `https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0${this.championDetails.key}/ability_0${this.championDetails.key}_P1.webm`
       })
@@ -58,7 +58,7 @@ export class ChampionDetailComponent {
     this.habilityDescription = description
     this.video = key.length === 2
           ? `https://d28xe8vt774jo5.cloudfront.net/champion-abilities/00${key}/ability_00${key}_${hability}.webm`
-          : this.video = key.length === 0
+          : this.video = key.length === 1
             ? `https://d28xe8vt774jo5.cloudfront.net/champion-abilities/000${key}/ability_000${key}_${hability}.webm`
             : `https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0${key}/ability_0${key}_${hability}.webm`
   }
