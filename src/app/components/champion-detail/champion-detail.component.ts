@@ -12,6 +12,9 @@ export class ChampionDetailComponent {
   constructor(private activateRoute: ActivatedRoute){}
   http = inject(HttpClient)
   championDetails: any = {}
+  habilityName: string = ''
+  habilityDescription: string = ''
+  video: string = ''
 
   ngOnInit() {
       window.scrollTo({top: 0, behavior: 'smooth'});
@@ -23,6 +26,11 @@ export class ChampionDetailComponent {
         this.setMagicProgress(this.championDetails.info.magic)
         this.setDefenseProgress(this.championDetails.info.defense)
         this.setDifficultProgress(this.championDetails.info.difficulty)
+        this.habilityName = this.championDetails.passive.name
+        this.habilityDescription = this.championDetails.passive.description
+        this.video = this.championDetails.key.length === 2
+          ? `https://d28xe8vt774jo5.cloudfront.net/champion-abilities/00${this.championDetails.key}/ability_00${this.championDetails.key}_P1.webm`
+          : `https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0${this.championDetails.key}/ability_0${this.championDetails.key}_P1.webm`
       })
   }
   setAttackProgress(attack: number){
@@ -41,5 +49,17 @@ export class ChampionDetailComponent {
   setDifficultProgress(difficult: number){
     const bar: any = document.querySelector(".difficultbar");
     bar.style.setProperty("--progress", `${difficult*10}%`);
+  }
+
+  setHability(name:any, description:any, key:any, hability: string){
+    this.habilityName = name
+    this.habilityDescription = description
+    this.video = key.length === 2
+          ? `https://d28xe8vt774jo5.cloudfront.net/champion-abilities/00${key}/ability_00${key}_${hability}.webm`
+          : `https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0${key}/ability_0${key}_${hability}.webm`
+  }
+
+  lolChampNavigate(champion: string){
+    window.location.href = `https://www.leagueoflegends.com/es-es/champions/${champion}/`;
   }
 }
