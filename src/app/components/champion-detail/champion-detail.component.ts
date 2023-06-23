@@ -20,4 +20,28 @@ export class ChampionDetailComponent {
         console.log(Object.values(data.data)[0])
       })
   }
+  setAttackProgress(attack: number){
+    const bar: any = document.querySelector(".attackbar");
+    setTimeout(() => {
+      bar.style.setProperty("--progress", `${attack*10}%`);
+    }, 500);
+  }
+  setMagicProgress(magic: number){
+    const bar: any = document.querySelector(".magicbar");
+    setTimeout(() => {
+      bar.style.setProperty("--progress", `${magic*10}%`);
+    }, 500);
+  }
+  setDefenseProgress(defense: number){
+    const bar: any = document.querySelector(".defensebar");
+    setTimeout(() => {
+      bar.style.setProperty("--progress", `${defense*10}%`);
+    }, 500);
+  }
+  setDifficultProgress(difficult: number){
+    const bar: any = document.querySelector(".difficultbar");
+    setTimeout(() => {
+      bar.style.setProperty("--progress", `${difficult*10}%`);
+    }, 500);
+  }
 }

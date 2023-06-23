@@ -118,6 +118,87 @@ p{padding-top:5px;font-size:17px}
   width: 100%;
   height: auto;
 }
+.info-container{
+  padding: 20px
+}
+.info-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+.card {
+  width: 100%;
+  height: auto;
+  background-color: #292929;
+  border-radius: 10px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.24);
+  border: 2px solid rgba(7, 7, 7, 0.12);
+  font-size: 16px;
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+}
+
+.icon {
+  margin: 0;
+  width: 100%;
+  height: 80px;
+  max-width: 80px;
+  background: linear-gradient(90deg, #E5D487 0%, #947538 40%, rgba(0, 0, 0, 0.28) 60%);
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.8s ease;
+  background-position: 0px;
+  background-size: 200px;
+}
+
+.icon svg {
+  fill: #202020;
+  height: 100%;
+  padding: 10px;
+}
+
+.card .title {
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  margin-top: 30px;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.card .text {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 13px;
+  text-align: center;
+  margin-top: 20px;
+  color: white;
+  font-weight: 200;
+  letter-spacing: 2px;
+  opacity: 0;
+  max-height: 0;
+  transition: all 0.3s ease;
+}
+
+.card {
+  height: 270px;
+}
+
+.card .text {
+  transition: all 0.3s ease;
+  opacity: 1;
+  max-height: 40px;
+}
 .habilities-container{
   background:#1D1F20;
   color: white;
@@ -125,4 +206,40 @@ p{padding-top:5px;font-size:17px}
 .habilities-container h1{
   margin-bottom: 0;
 }
+.progress {
+  --progress: 0%;
+  width: 80%;
+  height: 10px;
+  border: 1px solid #947538;
+  margin-top: 20px;
+  padding: auto;
+  box-shadow: 0 0 10px #E5D487;
+}
 
+.progress .attackbar, .progress .magicbar, .progress .defensebar, .progress .difficultbar {
+  width: var(--progress);
+  height: 100%;
+  background: linear-gradient(#E5D487, gold, #dab367);
+  background-repeat: repeat;
+  box-shadow: 0 0 10px 0px orange;
+  animation: 
+    shine 8s ease-in infinite,
+    end 1s ease-out 1 7s;
+  transition: width 3s ease 3s;
+}
+
+@property --progress {
+  syntax: "<length>";
+  initial-value: 0%;
+  inherits: true;
+}
+
+@keyframes shine {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 50px; }
+}
+
+@keyframes end {
+  0%, 100% { box-shadow: 0 0 10px 0px orange; }
+  50% { box-shadow: 0 0 15px 5px orange; }
+}
