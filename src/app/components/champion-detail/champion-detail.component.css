@@ -177,6 +177,18 @@ p{padding-top:5px;font-size:17px}
   letter-spacing: 4px;
 }
 
+.title-description{
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  background: -webkit-linear-gradient(#E5D487, #947538);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+  font-weight: 600;
+  letter-spacing: 4px;
+}
+
 .card .title {
   width: 100%;
   margin: 0;
